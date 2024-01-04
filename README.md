@@ -55,6 +55,16 @@ Pour installer mon projet vous devez :
   Cliquer sur l'APKet l'installer 
 ```
     
+## 🔗 Asset Links
+
+- Pour le UI : https://assetstore.unity.com/packages/tools/gui/marklight-37466
+- Pour le joystick : https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631 
+- Pour le Héro : https://assetstore.unity.com/packages/3d/characters/humanoids/humans/free-modular-character-fantasy-rpg-human-male-228952
+- Pour les monstre : https://assetstore.unity.com/packages/3d/characters/creatures/golemmonster-33260 https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy-monster-skeleton-35635 
+- Pour les décors dans les niveaux : https://assetstore.unity.com/packages/2d/textures-materials/floors/yughues-free-ground-materials-13001 https://assetstore.unity.com/packages/3d/environments/house-pack-35346 https://assetstore.unity.com/packages/3d/vegetation/trees/mobile-tree-package-18866 https://assetstore.unity.com/packages/3d/props/exterior/rock-package-118182 https://assetstore.unity.com/packages/3d/props/exterior/low-poly-barriers-pack-free-201810 
+
+
+
 ## FAQ
 
 #### Question 1
