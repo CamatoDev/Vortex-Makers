@@ -20,6 +20,7 @@ public class PauseOption : MonoBehaviour
     void Start()
     {
         VolumeMusicChange();
+        EffectMusicChange();
     }
 
     //fonction pour affiché le menu des options
@@ -40,7 +41,7 @@ public class PauseOption : MonoBehaviour
     public void EffectMusicChange()
     {
         EffectAudioSource.volume = EffectSlider.value;
-        VolumeEffectText.text = "Volume " + (EffectAudioSource.volume * 100).ToString("00") + " %";
+        VolumeEffectText.text = "Effets " + (EffectAudioSource.volume * 100).ToString("00") + " %";
     }
 
     //fonction pour sortir du menu des option

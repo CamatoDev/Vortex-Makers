@@ -52,7 +52,7 @@ public class ObjectifDirection : MonoBehaviour
     void Update()
     {
         //Gestion du suivi du sur l'axe x et z 
-        transform.position = new Vector3(player.transform.position.x + 0.15f, player.transform.position.y + 46, player.transform.position.z - 8);
+        transform.position = new Vector3(player.transform.position.x + 0.15f, player.transform.position.y + 36, player.transform.position.z - 8);
 
         if (target == null)
         {

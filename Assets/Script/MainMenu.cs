@@ -24,13 +24,14 @@ public class MainMenu : MonoBehaviour
 
     //pour la gestion du NameTag
     TouchScreenKeyboard clavier; //pour le clavier 
-    public static Text NameTag; //le pseudo du joueur 
+    public static string NameTag; //le pseudo du joueur 
 
 
     //
     void Start()
     {
         VolumeMusicChange();
+        NameTag = PlayerPrefs.GetString("nameTag", "INCONU");
     }
 
     private void Update()
@@ -39,7 +40,8 @@ public class MainMenu : MonoBehaviour
         {
             if(clavier.done) //si on valide la saisi 
             {
-                NameTag.text = clavier.text; //On concerve la saisi comme étant le Name tag 
+                PlayerPrefs.SetString("nameTag", clavier.text);//On concerve la saisi
+                //NameTag.text = clavier.text; //On concerve la saisi comme étant le Name tag 
                 clavier = null; //on vide le clavier 
             }
         }

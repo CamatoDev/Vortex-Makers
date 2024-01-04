@@ -34,6 +34,12 @@ public class Player : MonoBehaviour
     public AudioClip Die;
     public AudioClip GetHit;
 
+    private void OnEnable()
+    {
+        //on recupère la valeur du nameTag passé dans lr menu Sinon les nameTag est Inconu
+        PlayerNameTag.text = PlayerPrefs.GetString("nameTag", "INCONU");
+    }
+
     void Start()
     {
         currentHealth = 100;
@@ -45,12 +51,7 @@ public class Player : MonoBehaviour
 
         charactermotor = gameObject.GetComponent<CharacterMotor>();
         playerAnimations = gameObject.GetComponent<Animator>();
-        audioSource = gameObject.GetComponent<AudioSource>();
-
-        if(MainMenu.NameTag.text != null)
-        {
-            PlayerNameTag.text = MainMenu.NameTag.text;
-        }  
+        audioSource = gameObject.GetComponent<AudioSource>(); 
     }
 
     public void ApplyDamage(float TheDamage)
@@ -85,14 +86,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!TouchScreenKeyboard.visible && clavier != null) //lorsque le clavier est visible et qu'il y'a une saisi 
-        {
-            if (clavier.done) //si on valide la saisi 
-            {
-                MainMenu.NameTag.text = clavier.text; //On concerve la saisi comme étant le Name tag 
-                clavier = null; //on vide le clavier 
-            }
-        }
 
         //pour les ennemis tuées 
         EnemyKillInGame.text = "Kill : " + EnemyKillNumber.ToString();
