@@ -30,13 +30,13 @@ public class VillageBoostEffect : MonoBehaviour
             return;
         }
         //si le joueur est dans le village 
-        if (target.GetComponent<Player>().currentHealth <= 99)
+        if (target.GetComponent<Player>().currentHealth <= 99.5f)
         {
-            target.GetComponent<Player>().currentHealth += 1;
+            target.GetComponent<Player>().currentHealth += 0.5f;
         }
-        if (target.GetComponent<Player>().currentMana <= 99)
+        if (target.GetComponent<Player>().currentMana <= 99.5f)
         {
-            target.GetComponent<Player>().currentMana += 1;
+            target.GetComponent<Player>().currentMana += 0.5f;
         }
         Debug.Log("Le joueur reçoit les effet du village");
     }

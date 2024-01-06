@@ -60,6 +60,12 @@ public class MainMenu : MonoBehaviour
         OptionPanel.SetActive(true);
     }
 
+    //fonction pour lire le tutoriel du jeu 
+    public void Guide()
+    {
+        sceneFader.FadeTo("GameGuide 0");
+    }
+
     //fonction pour modifier la valeur de la music
     public void VolumeMusicChange()
     {

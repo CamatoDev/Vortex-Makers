@@ -87,7 +87,7 @@ public class SpiritualSkill : MonoBehaviour
 
             shootCountdown -= 10;
             //shootCountdown -= Time.deltaTime;
-            Player.GetComponent<Animator>().SetTrigger("Shot");
+            Player.GetComponent<Animator>().SetTrigger("BigShot");
             Player.GetComponent<AudioSource>().PlayOneShot(SpiritualExplosionSound);
             Player.GetComponent<Player>().currentMana -= spritualExplosionEnergy;
 

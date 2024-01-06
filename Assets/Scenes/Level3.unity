@@ -804,7 +804,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Vous avez vaincu tous les enne\xF9is \xE0 proximit\xE9 du villages."
+  m_Text: "Vous avez vaincu tous les ennemis \xE0 proximit\xE9s du villages."
 --- !u!222 &97235575
 CanvasRenderer:
   m_ObjectHideFlags: 0
