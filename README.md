@@ -1,7 +1,14 @@
 
 # Protect your village 
+
 ###### Project links
+
 - https://github.com/CamatoDev/Vortex-Makers
+
+## Unity version
+
+Unity 2020.3.35f1 (64-bit)
+
 ## Game Summary
 
 ### Idée principale : Défendre son village des attaques de différents ennemis grâce à des techniques et des sorts ancestraux que vous êtes le dernier à maitriser. 
@@ -53,9 +60,17 @@ Pour installer mon projet vous devez :
   Ouvrir le dossier du projet 
   Allez dans le dossier Build
   Recupérer l'APK et l'envoyé dans un smartphone Android 
-  Cliquer sur l'APKet l'installer 
+  Cliquer sur l'APK Puis sur Installer 
+  Une fois le jeu installé Cliquer sur Ouvrir 
+  Le jeu vas demarrer et ce sera à vous choisir les OPTION qui vous conviennent et de lire le GUIDE depuis le menu principal.
+  Enfin Cliquer sur COMMENCER  
 ```
     
+## Demo
+
+La demo ce trouve dans le dossier du projet 
+
+
 ## 🔗 Asset Links
 
 - Pour le UI : https://assetstore.unity.com/packages/tools/gui/marklight-37466
