@@ -3853,8 +3853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353a4ea6769fee0439adf520b36d5148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 6943010215775519046, guid: dbcc54c643c4771479e3a6b43922cafb,
-    type: 3}
+  gameManager: {fileID: 648778817}
   waves:
   - enemy: {fileID: 7210381356753246300, guid: df1927f6be0f63e40bf74e9ff04fbd98, type: 3}
     count: 8
@@ -8940,8 +8939,8 @@ MonoBehaviour:
   sceneFader: {fileID: 1726724053}
   levelToLoad: MainMenu
   EnemyKillNumberText: {fileID: 2099184529}
-  nextLevel: level2
-  levelToUnlock: 2
+  nextLevel: level4
+  levelToUnlock: 4
 --- !u!95 &1418968098
 Animator:
   serializedVersion: 3
