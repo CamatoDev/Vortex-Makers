@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SpiritualBoost : MonoBehaviour
 {
-    //distance entre le joueur et le boost 
-    private float Distance;
     //ditance où on reçoit les effets du boost
     public float BoostRange = 2.5f;
     //valeur du boost
@@ -14,17 +12,16 @@ public class SpiritualBoost : MonoBehaviour
     //cible 
     public Transform Target;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
         //on recupère le joueur comme étant la cible
         Target = GameObject.Find("Player").transform;
+    }
 
-        //on recupère la distance entre le joueur et le boost
-        Distance = Vector3.Distance(Target.position, transform.position);
-
+    private void OnCollisionEnter(Collision collision)
+    {
         //si le joueur touche le boost il reçoit son effet 
-        if (Distance < BoostRange && !Target.GetComponent<CharacterMotor>().isDead)
+        if (collision.transform.tag == "Player")
         {
             Boost();
         }

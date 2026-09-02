@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     private CharacterMotor charactermotor;
     private Animator playerAnimations;
     private AudioSource audioSource;
+    private CapsuleCollider capsuleCollider;
+    private Rigidbody rb;
 
     public AudioClip Die;
     public AudioClip GetHit;
@@ -51,7 +53,9 @@ public class Player : MonoBehaviour
 
         charactermotor = gameObject.GetComponent<CharacterMotor>();
         playerAnimations = gameObject.GetComponent<Animator>();
-        audioSource = gameObject.GetComponent<AudioSource>(); 
+        audioSource = gameObject.GetComponent<AudioSource>();
+        capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     public void ApplyDamage(float TheDamage)
@@ -71,10 +75,15 @@ public class Player : MonoBehaviour
 
     public void Dead()
     {
-        // à la mort du perso 
-        playerAnimations.SetTrigger("Die");
-        audioSource.PlayOneShot(Die);
         charactermotor.isDead = true;
+        // à la mort du perso 
+        playerAnimations.SetFloat("Walk1", 0f);
+        // Désactivation de la boite de collision et de la gravite du joueur 
+        rb.useGravity = false;
+        capsuleCollider.height = 0.1f;
+        capsuleCollider.radius = 0.1f;
+        audioSource.PlayOneShot(Die);
+        playerAnimations.SetTrigger("Die");
     }
 
     //fonction pour gérer l'ouverture du clavier

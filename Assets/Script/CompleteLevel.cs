@@ -29,7 +29,7 @@ public class CompleteLevel : MonoBehaviour
         }
     }
 
-    //Pour passer au niveau suivant 
+    //Pour passer au niveau suivant
     public void NextLevel()
     {
         sceneFader.FadeTo(nextLevel);
