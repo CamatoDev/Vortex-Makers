@@ -27,7 +27,6 @@
 | ![Présentation](Assets/_Game/UIs/Images/Ennemis.png) | ![Présentation](Assets/_Game/UIs/Images/Niveau.png) | ![Présentation](Assets/_Game/UIs/Images/Village.png) |
 
 </div>
-remplace les blocs ci-dessus par `![Description](Screenshots/capture1.png)`
 
 ---
 
@@ -207,7 +206,7 @@ Le projet est disponible en ligne sur itch.io :
  
 ## 🛠️ Environnement technique
  
-- **Moteur** : Unity 2020.3.35f1 (64-bit)
+- **Moteur** : Unity 2022.3.62f3 (64-bit)
 - **Langage** : C#
 - **Plateforme cible** : Android
 - **Navigation IA** : NavMesh Agent (Unity AI)
