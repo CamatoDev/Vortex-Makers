@@ -3,7 +3,7 @@
 # 🛡️ The Last Guardian
 ### *(nom de code : Protect your village)*
 
-[![Présentation](file:///c%3A/Users/Camato_desu/Desktop/Projets/House%20Game%20Day/Images/The_Last_Guardian_Presentation.jpg)]
+![Présentation](Assets/_Game/UIs/Images/The_Last_Guardian_Presentation.jpg)
 
 **Un action-RPG top-down où le dernier gardien d'un village doit repousser des vagues d'ennemis grâce à l'épée et à la magie ancestrale.**
 
@@ -19,12 +19,12 @@
 
 <div align="center">
 
-<video controls src="file:///c%3A/Users/Camato_desu/Desktop/Projets/House%20Game%20Day/Vid%C3%A9os/The%20Last%20Guardian_1.mp4" title="Vidéo Démo"></video>
+<video controls src="Assets/_Game/UIs/Vidéo/The Last Guardian 1.mp4" title="Vidéo Démo"></video>
 
 
-| Combat au corps-à-corps | Sorts spirituels | Vue d'ensemble du village |
+| Vue des ennemis | Interface dans un niveau | Vue d'ensemble du village |
 |:---:|:---:|:---:|
-| *(capture d'écran)* | *(capture d'écran)* | *(capture d'écran)* |
+| ![Présentation](Assets/_Game/UIs/Images/Ennemis.png) | ![Présentation](Assets/_Game/UIs/Images/Niveau.png) | ![Présentation](Assets/_Game/UIs/Images/Village.png) |
 
 </div>
 remplace les blocs ci-dessus par `![Description](Screenshots/capture1.png)`
