@@ -25,9 +25,16 @@ public class GameManager : MonoBehaviour
     //variable pour gérer le joueur 
     public GameObject player;
 
+    private void Awake()
+    {
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        // Stopper la musique du menu principale
+        MenuMusicManager.StopMusic();
+
         gameIsOver = false;
         //pour appélé la fonction de la recherche d'ennemi qui on traverser les frontières du village de façon optimisé 
         InvokeRepeating("UpdateEnemyFind", 0f, 0.5f);

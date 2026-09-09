@@ -413,7 +413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MENU
+  m_Text: SORTIR
 --- !u!222 &10186944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12644,9 +12644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MENU
-
-'
+  m_Text: SORTIR
 --- !u!222 &626090573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19602,7 +19600,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3491d0d6029f05469dc3b5c6d0bec37, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 52c917840055b0649a51284dfb6bff63, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -25892,7 +25890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MENU
+  m_Text: SORTIR
 --- !u!222 &1274439942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38707,7 +38705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 1726724053}
-  levelToLoad: MainMenu
   EnemyKillNumberText: {fileID: 148188922}
 --- !u!95 &1923212477
 Animator:

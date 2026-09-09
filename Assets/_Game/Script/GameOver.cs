@@ -9,7 +9,7 @@ public class GameOver : MonoBehaviour
     //pour le fondu 
     public SceneFader sceneFader;
 
-    public string levelToLoad = "MainMenu";
+    private string levelToLoad = "LevelSelector";
 
     //pour le text du nombre d'ennemis tués 
     public Text EnemyKillNumberText;
