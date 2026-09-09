@@ -24,7 +24,7 @@
 
 | Vue des ennemis | Interface dans un niveau | Vue d'ensemble du village |
 |:---:|:---:|:---:|
-| ![Présentation](Assets/_Game/UIs/Images/Ennemis.png) | ![Présentation](Assets/_Game/UIs/Images/Niveau.png) | ![Présentation](Assets/_Game/UIs/Images/Village.png) |
+| ![Présentation](Assets/_Game/UIs/Images/Ennemis.png) | ![Présentation](Assets/_Game/UIs/Images/Level.png) | ![Présentation](Assets/_Game/UIs/Images/Village.png) |
 
 </div>
 
@@ -107,6 +107,15 @@ Le gameplay repose sur un équilibre à gérer en temps réel entre :
 ### Bonus et objets ramassables
 - **Bonus de vie**, **bonus de mana/énergie spirituelle** et **bonus de puissance** (multiplicateur temporaire de dégâts, physiques et magiques) apparaissent aléatoirement dans une zone définie de la carte.
 - Chaque bonus est consommé au contact du joueur, déclenche une animation dédiée, puis se détruit.
+- Une **refonte visuelle des trois bonus** est en préparation pour ancrer chaque objet dans un symbole camerounais fort et immédiatement reconnaissable — noix de cola (vie), cauris (énergie spirituelle) et amulette à dent de léopard (puissance). Voir *Évolutions prévues*.
+
+### 🎵 Audio & musique
+- **Bande-son originale** composée spécifiquement pour le jeu, remplaçant les pistes libres de droits utilisées jusque-là :
+  - **Thème Menu** : une piste mystique et héroïque (kalimba, chœurs) posant immédiatement l'ancrage culturel africain et le lore du "Dernier Gardien".
+  - **Thème Jeu** : une piste tribale et frénétique (djembés, 130 BPM), calée sur le rythme de survie/arcade des vagues.
+- **Musique de menu continue** gérée par un singleton dédié (`MenuMusicManager`, voir architecture technique) : la piste tourne en boucle de façon fluide entre le Main Menu et le Level Selector, sans jamais redémarrer depuis le début.
+- **Sécurité anti-doublon** : le script détecte si une instance de la musique de menu est déjà en train de jouer avant d'en relancer une, pour éviter toute superposition en cas d'aller-retour entre écrans.
+- **Transition propre vers l'action** : une fonction `StopMusic()` de type "brute force" scanne et détruit proprement la musique de menu dès le chargement de la scène de jeu, garantissant que le thème d'action prend le relais pile au bon moment, sans chevauchement.
 
 ### Guidage visuel
 - Une **flèche indicatrice** suit le joueur en permanence et pointe vers l'ennemi le plus proche, offrant un repère de portée illimitée pour anticiper les menaces.
@@ -159,6 +168,15 @@ Le projet est organisé autour de trois grandes familles de scripts C# :
 | `SpiritualBoost.cs` | Bonus de restauration de mana |
 | `PowerBoost.cs` | Bonus de multiplication temporaire des dégâts |
 | `SpawnBoost.cs` | Apparition aléatoire d'un bonus dans une zone définie |
+
+</details>
+
+<details>
+<summary><strong>🎵 Audio</strong></summary>
+
+| Script | Rôle |
+|---|---|
+| `MenuMusicManager.cs` | Singleton (`DontDestroyOnLoad`) gérant la lecture continue de la musique de menu entre écrans, avec détection anti-doublon et arrêt propre (`StopMusic()`) au lancement d'un niveau |
 
 </details>
 
@@ -229,9 +247,11 @@ Le projet est disponible en ligne sur itch.io :
  
 Dans le cadre de sa prochaine évolution pour une future compétition, le projet prévoit notamment :
  
-- [ ] **Amélioration visuelle du village** — refonte graphique de la zone refuge du joueur.
+- [x] **Bande-son originale et système de musique dynamique** — deux pistes uniques (menu / jeu) avec transition fluide et sans chevauchement entre les scènes *(implémenté)*.
+- [ ] **Nouveau design des bonus** — refonte visuelle des trois objets ramassables autour de symboles camerounais forts (noix de cola, cauris, amulette à dent de léopard) ; direction artistique définie, intégration des modèles à venir.
+- [ ] **Poursuite de la refonte visuelle du village** — premiers ajustements déjà intégrés à l'état actuel du village ; une identité architecturale locale plus marquée (inspirée du patrimoine bâti camerounais) reste à finaliser.
 - [ ] **Meilleure répartition des objets dans le village** — agencement plus naturel des décors et éléments pour donner un effet plus vivant et habité.
-- [ ] **Changement du modèle du personnage principal** — nouveau design pour le héros incarné par le joueur.
+- [ ] **Changement du modèle du personnage principal** — nouveau design pour le héros incarné par le joueur (pensé pour de futurs skins personnalisables).
 - [ ] **Ajout de nouveaux ennemis** — diversification des types d'adversaires et de leurs comportements.
 - [ ] **Ajout de plusieurs niveaux** — extension du contenu jouable avec de nouvelles cartes et vagues.
 ---
